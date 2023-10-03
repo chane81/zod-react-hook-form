@@ -1,0 +1,34 @@
+{
+  "singleQuote": true,
+  "parser": "typescript",
+  "semi": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "printWidth": 83,
+  "arrowParens": "always",
+  "jsxSingleQuote": true,
+  "overrides": [
+    {
+      "files": ["*.json", ".*rc"],
+      "options": {
+        "parser": "json5",
+        "quoteProps": "preserve",
+        "singleQuote": false,
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.mdx",
+      "options": { "parser": "mdx" }
+    },
+    {
+      "files": "*.css",
+      "options": { "parser": "css" }
+    },
+    {
+      "files": "*.scss",
+      "options": { "parser": "scss" }
+    }
+  ]
+}
