@@ -8,3 +8,18 @@
 - tailwind
 - twin micro
 - pnpm
+
+## 실행
+```
+# package install
+$ pnpm install
+
+# dev start
+$ pnpm dev
+
+# build
+$ pnpm build
+
+# production start
+$ pnpm start
+```
