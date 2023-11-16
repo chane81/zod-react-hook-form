@@ -19,10 +19,6 @@
       }
     },
     {
-      "files": "*.mdx",
-      "options": { "parser": "mdx" }
-    },
-    {
       "files": "*.css",
       "options": { "parser": "css" }
     },
