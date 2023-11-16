@@ -6,7 +6,6 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { TSelectOptions } from '@/types/global/selectOptions';
 import { FieldValues, UseControllerProps } from 'react-hook-form';
 import {
   Select,
@@ -15,6 +14,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+
+export type TSelectOptions<T = string> = Array<{
+  label: string;
+  value: T;
+}>;
 
 interface ISelectFieldProps<OptionValue> {
   labelText?: string;
