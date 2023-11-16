@@ -1,5 +1,5 @@
+import { TSelectOptions } from '@/components/form/SelectField';
 import { TUser } from '@/schema/user';
-import { TSelectOptions } from '@/types/global/selectOptions';
 
 export const SEX_OPTIONS: TSelectOptions<TUser['sex']> = [
   {

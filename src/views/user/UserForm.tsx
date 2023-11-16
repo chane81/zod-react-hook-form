@@ -1,4 +1,4 @@
-import { TUser, userSchema } from '@/schema/user';
+import { TUser, userSchema, userSchemaCustom } from '@/schema/user';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form } from '@/components/ui/form';
@@ -11,6 +11,8 @@ import { useToast } from '@/components/ui/use-toast';
 const UserForm = () => {
   const { toast } = useToast();
   const form = useForm<TUser>({
+    // userSchemaCustom 으로 바꿔보면!
+    // userSchema 의 name 의 메시지를 override 한 메시지를 볼 수 있다.
     resolver: zodResolver(userSchema),
     defaultValues: {
       name: '',
@@ -19,6 +21,7 @@ const UserForm = () => {
       sex: 'male',
       phoneNum: '',
       isGamer: false,
+      address: '',
     },
   });
 
@@ -79,6 +82,13 @@ const UserForm = () => {
           description='This is your phone number'
           labelText='Phone Number'
           placeholder='Put your phone number'
+        />
+        <TextField
+          control={control}
+          name='address'
+          description='This is your address'
+          labelText='Address'
+          placeholder='Put your address'
         />
         <SelectField
           control={control}
