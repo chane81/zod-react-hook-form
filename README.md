@@ -10,6 +10,7 @@
 - pnpm
 
 ## 실행
+- node 버전 18로 세팅해야 실행가능
 ```
 # package install
 $ pnpm install
